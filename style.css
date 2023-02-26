@@ -80,7 +80,7 @@ body {
 .main-display__password-block-container .main-display__password-block-input, 
 .main-display__password-block-container .main-display__password-block-password-display {
     background-color: #273549;
-    padding: 9px 17px;
+    padding: 18px 17px;
     border-radius: 6px;
     border: solid 1px #273549;
     width: 211px;
