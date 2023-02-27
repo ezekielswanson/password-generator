@@ -23,12 +23,18 @@ function randomCharacters() {
 
 
 //Setting var to gen. random passwords and length to 15
-let passwordOne = randomCharacters();
-let passwordTwo = randomCharacters();
+// set to empty string here as well
+let passwordOne = "";
+let passwordTwo = "";
 let passwordLength = 15;
 
 
 function generatePassword() {
+  passwordOne = "";
+  passwordTwo = "";
+  //clear before 
+  // emptying string before looping through essentially setting to 0
+
   for (let i=0; i < passwordLength; i++ ) {
     passwordOne += randomCharacters();
     passwordTwo += randomCharacters();
@@ -52,20 +58,16 @@ generator.addEventListener('click', function() {
 });
 
 
-//set function to run on reload 
+
+/*Generates password on On load if needed 
+document.addEventListener("DOMContentLoaded", function() {
+  generatePassword()
+
+})
+*/
 
 
-const resetPassword = () => {
-  if (passwordOne.length !== 0 || passwordTwo.length !== 0) {
-    passwordOne = '';
-    passwordTwo = '';
-  }
-}
 
-generator.addEventListener('click', function() {
-  resetPassword();
-  generatePassword();
-});
 
 
 
