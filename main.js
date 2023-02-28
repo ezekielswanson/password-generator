@@ -20,8 +20,6 @@ function randomCharacters() {
     
 }
 
-
-
 //Setting var to gen. random passwords and length to 15
 // set to empty string here as well
 let passwordOne = "";
@@ -30,10 +28,11 @@ let passwordLength = 15;
 
 
 function generatePassword() {
-  passwordOne = "";
-  passwordTwo = "";
   //clear before 
   // emptying string before looping through essentially setting to 0
+  // works b/c it goes step by step
+  passwordOne = "";
+  passwordTwo = "";
 
   for (let i=0; i < passwordLength; i++ ) {
     passwordOne += randomCharacters();
@@ -46,8 +45,6 @@ function generatePassword() {
   }
 
 }
-
-//need to reset the password and reformat back in input
 
 
 //Getting random password on click
