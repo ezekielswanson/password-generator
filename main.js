@@ -1,7 +1,7 @@
 
 
 
-
+//start function and grab variables
 let generator = document.querySelector('.password-generator');
 let passwordDisplayOne = document.querySelector('.main-display__password-block-input');
 let passwordDisplayTwo = document.querySelector('.main-display__password-block-password-display');
@@ -16,6 +16,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 function randomCharacters() {
     let randomPassword = Math.floor( Math.random() * characters.length)
+    //select random character at random then returning 
     return characters[randomPassword];
     
 }
@@ -34,7 +35,10 @@ function generatePassword() {
   passwordOne = "";
   passwordTwo = "";
 
+  //change function name
   for (let i=0; i < passwordLength; i++ ) {
+
+    //incrementing through and adding random character everytime 
     passwordOne += randomCharacters();
     passwordTwo += randomCharacters();
 
